@@ -12,10 +12,10 @@ namespace Shared.Models
         public string Title { get; set; }
         public int Year { get; set; }
         public string Genre { get; set; }
-        public byte[] Picture { get; set; }
         public decimal Rating { get; set; }
         public bool Watched { get; set; }
         public bool Favorite { get; set; }
         public string IMDBLink { get; set; }
+        public string Description { get; set; }
     }
 }
