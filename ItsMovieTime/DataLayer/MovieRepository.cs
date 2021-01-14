@@ -39,7 +39,7 @@ namespace DataLayer
                 m.Description = sqlDataReader.GetString(8);
                 listOfMovies.Add(m);
             }
-
+            DBConnection.CloseConnection();
             return listOfMovies;
         }
 
