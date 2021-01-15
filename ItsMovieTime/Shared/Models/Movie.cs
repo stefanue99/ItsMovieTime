@@ -15,7 +15,7 @@ namespace Shared.Models
         public decimal Rating { get; set; }
         public bool Watched { get; set; }
         public bool Favorite { get; set; }
-        public string IMDBLink { get; set; }
+        public string OnlineLink { get; set; }
         public string Description { get; set; }
     }
 }

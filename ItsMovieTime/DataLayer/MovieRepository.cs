@@ -35,7 +35,7 @@ namespace DataLayer
                 m.Rating = sqlDataReader.GetDecimal(4);
                 m.Watched = sqlDataReader.GetBoolean(5);
                 m.Favorite = sqlDataReader.GetBoolean(6);
-                m.IMDBLink = sqlDataReader.GetString(7);
+                m.OnlineLink = sqlDataReader.GetString(7);
                 m.Description = sqlDataReader.GetString(8);
                 listOfMovies.Add(m);
             }
@@ -45,7 +45,7 @@ namespace DataLayer
 
         public int InsertMovie(Movie m)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Movies SET VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", m.Title, m.Year, m.Genre,  m.Rating, m.Watched, m.Favorite, m.IMDBLink, m.Description));
+            var result = DBConnection.EditData(string.Format("UPDATE Movies SET VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", m.Title, m.Year, m.Genre,  m.Rating, m.Watched, m.Favorite, m.OnlineLink, m.Description));
 
             DBConnection.CloseConnection();
             return result;
@@ -53,7 +53,7 @@ namespace DataLayer
 
         public int UpdateMovie(Movie m)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Movies SET Title = '{0}', Year = '{1}', Genre = '{2}', Rating = '{3}', Watched = '{4}', Favorite = '{5}', IMDBLink = '{6}', Description = '{7}' WHERE Id = '{8}';", m.Title, m.Year, m.Genre,  m.Rating, m.Watched, m.Favorite, m.IMDBLink, m.Description, m.Id));
+            var result = DBConnection.EditData(string.Format("UPDATE Movies SET Title = '{0}', Year = '{1}', Genre = '{2}', Rating = '{3}', Watched = '{4}', Favorite = '{5}', OnlineLink = '{6}', Description = '{7}' WHERE Id = '{8}';", m.Title, m.Year, m.Genre,  m.Rating, m.Watched, m.Favorite, m.OnlineLink, m.Description, m.Id));
 
             DBConnection.CloseConnection();
             return result;
