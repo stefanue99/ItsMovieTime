@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\Business\IMovieBusiness.cs" />
     <Compile Include="Interfaces\Repository\IMovieRepository.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Movie.cs" />
