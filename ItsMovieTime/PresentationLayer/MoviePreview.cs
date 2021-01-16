@@ -18,10 +18,10 @@ namespace PresentationLayer
     {
         private Movie movie;
         private readonly IMovieBusiness movieBusiness;
-        public MoviePreview(Movie m)
+        public MoviePreview(IMovieBusiness _movieBusiness, Movie m)
         {
             InitializeComponent();
-            this.movieBusiness = new MovieBusiness();
+            this.movieBusiness = _movieBusiness;
             movie = m;
             labelTitle.Text = m.Title;
             labelYear.Text = "Godina snimanja : " + m.Year.ToString();

@@ -84,6 +84,7 @@ namespace PresentationLayer
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(199, 25);
             this.textBoxPassword.TabIndex = 5;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -107,6 +108,7 @@ namespace PresentationLayer
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.buttonlogin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

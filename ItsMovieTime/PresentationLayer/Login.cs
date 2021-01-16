@@ -15,10 +15,10 @@ namespace PresentationLayer
     public partial class Login : Form
     {
         private readonly IAdministratorBusiness administrationBusiness;
-        public Login()
+        public Login(IAdministratorBusiness _administrationBusiness)
         {
             InitializeComponent();
-            this.administrationBusiness = new AdministratorBusiness();
+            this.administrationBusiness = _administrationBusiness;
         }
 
         private void buttonlogin_Click(object sender, EventArgs e)

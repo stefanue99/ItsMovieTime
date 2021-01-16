@@ -47,6 +47,8 @@ namespace PresentationLayer
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(261, 17);
             this.dataGridView1.Name = "dataGridView1";
@@ -101,7 +103,9 @@ namespace PresentationLayer
             "Akcija",
             "Misterija",
             "Drama",
-            "Dokumentarni"});
+            "Istorijski",
+            "Naucna fantastika",
+            "Avantura"});
             this.comboBoxGenre.Location = new System.Drawing.Point(62, 125);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(140, 25);
@@ -193,7 +197,7 @@ namespace PresentationLayer
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Its Movie Time";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

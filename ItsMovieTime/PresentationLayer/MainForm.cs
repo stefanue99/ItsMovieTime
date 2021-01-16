@@ -16,27 +16,29 @@ namespace PresentationLayer
     public partial class MainForm : Form
     {
         private readonly IMovieBusiness movieBusiness;
-        public MainForm()
+        private readonly IAdministratorBusiness administratorBusiness;
+        public MainForm(IMovieBusiness _movieBusiness, IAdministratorBusiness _administratorBusiness)
         {
             InitializeComponent();
-            this.movieBusiness = new MovieBusiness();
+            this.movieBusiness = _movieBusiness;
+            this.administratorBusiness = _administratorBusiness;
         }
         private void buttonAdmin_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login(this.administratorBusiness);
             if (login.ShowDialog() == DialogResult.OK) 
             {
-                Admins admins = new Admins();
+                Admins admins = new Admins(this.administratorBusiness);
                 admins.Show();
             }
         }
 
         private void buttonMovies_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login(this.administratorBusiness);
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Movies admins = new Movies();
+                Movies admins = new Movies(this.movieBusiness);
                 admins.Show();
             }
         }

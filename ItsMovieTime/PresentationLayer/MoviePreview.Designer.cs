@@ -137,6 +137,7 @@ namespace PresentationLayer
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MoviePreview";
             this.Text = "Movie";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MoviePreview_FormClosing);

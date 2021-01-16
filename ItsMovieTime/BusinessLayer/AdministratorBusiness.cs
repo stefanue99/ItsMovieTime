@@ -13,9 +13,9 @@ namespace BusinessLayer
     public class AdministratorBusiness : IAdministratorBusiness
     {
         private readonly IAdministratorRepository administrationRepository;
-        public AdministratorBusiness() 
+        public AdministratorBusiness(IAdministratorRepository _administrationRepository) 
         {
-            this.administrationRepository = new AdministratorRepository();
+            this.administrationRepository = _administrationRepository;
         }
         public bool DeleteAdministrator(int id)
         {
