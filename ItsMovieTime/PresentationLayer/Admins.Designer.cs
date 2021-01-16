@@ -245,6 +245,7 @@ namespace PresentationLayer
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Admins";
             this.Text = "Admins";
             this.Load += new System.EventHandler(this.Admins_Load);

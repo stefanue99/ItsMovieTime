@@ -16,12 +16,10 @@ namespace PresentationLayer
     public partial class Movies : Form
     {
         private readonly IMovieBusiness movieBusiness;
-        public Movies()
+        public Movies(IMovieBusiness _movieBusiness)
         {
             InitializeComponent();
-            this.movieBusiness = new MovieBusiness();
-            
-
+            this.movieBusiness = _movieBusiness;
         }
         private void buttonEdit_Click(object sender, EventArgs e)
         {

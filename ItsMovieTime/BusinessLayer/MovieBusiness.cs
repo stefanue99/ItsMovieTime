@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ namespace BusinessLayer
 {
     public class MovieBusiness : IMovieBusiness
     {
-        private readonly MovieRepository movieRepository;
-        public MovieBusiness() 
+        private readonly IMovieRepository movieRepository;
+        public MovieBusiness(IMovieRepository _movieRepository) 
         {
-            this.movieRepository = new MovieRepository();
+            this.movieRepository = _movieRepository;
         }
         public List<Movie> GetAllMovies() 
         {

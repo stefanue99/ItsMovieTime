@@ -16,10 +16,10 @@ namespace PresentationLayer
     public partial class Admins : Form
     {
         private readonly IAdministratorBusiness administrationBusiness;
-        public Admins()
+        public Admins(IAdministratorBusiness _administrationBusiness)
         {
             InitializeComponent();
-            this.administrationBusiness = new AdministratorBusiness();
+            this.administrationBusiness = _administrationBusiness;
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
