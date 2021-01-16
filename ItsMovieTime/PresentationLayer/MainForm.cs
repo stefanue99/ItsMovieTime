@@ -70,7 +70,7 @@ namespace PresentationLayer
             {
                 int movieId = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
                 Movie m = this.movieBusiness.GetMovieById(movieId);
-                MoviePreview mp = new MoviePreview(m);
+                MoviePreview mp = new MoviePreview(this.movieBusiness, m);
                 mp.ShowDialog();
             }
         }
