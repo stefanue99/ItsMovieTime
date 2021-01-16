@@ -52,7 +52,7 @@ namespace DataLayer
 
         public int UpdateAdministrator(Administrator a)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Administrators SET Name = '{0}', Surname = '{1}', Email = '{2}', PhoneNumber = '{3}', Username = '{4}', Password = '{5}'"));
+            var result = DBConnection.EditData(string.Format("UPDATE Administrators SET Name = '{0}', Surname = '{1}', Email = '{2}', PhoneNumber = '{3}', Username = '{4}', Password = '{5}' WHERE Id = '{6}'", a.Name, a.Surname, a.Email, a.PhoneNumber, a.UserName, a.Password, a.Id));
 
             DBConnection.CloseConnection();
             return result;
